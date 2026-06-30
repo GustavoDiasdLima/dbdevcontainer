@@ -14,4 +14,11 @@ INSERT INTO Especialidade (descricao)
     values ('Pediatra'), ('Cardiologista'), ('Ortopedista');
 
 INSERT INTO MedicoEspecialidade(cpf_medico, id_especialidade)
-    values (001, 01), (004, 02), (004, 03);
+    values ('001', 01), ('004', 02), ('004', 03);
+
+DELETE FROM MedicoEspecialidade
+WHERE cpf_medico = '004'
+AND id_especialidade = 2;
+
+INSERT INTO MedicoEspecialidade (cpf_medico, id_especialidade)
+    values ('004', 1);
